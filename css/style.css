@@ -1,0 +1,197 @@
+/* :root {
+	--primary-color: rgb(250, 250, 250, 0.5);
+	--secondary-color: rgb(184, 184, 184);
+}     questo serve tenerli costanti basta mettere poi var(--secondary-color) e quindi balzi la qestione del codice*/
+
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+header {
+	position: sticky;
+	top: 0;
+	background-color:  rgba(250, 250, 250, 0.5);
+	z-index: 1; /*mette in primo piano se uso fixed*/
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	}
+
+	.logo img {
+	max-width: 100px;
+}
+
+
+.menu_orizzontale {
+	padding: 20px;
+}
+
+.menu_orizzontale a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+	background-color: rgb(100, 100, 100);
+	padding: 10px 20px;
+	border-radius: 20px;
+	font-weight: bold;
+}
+.menu_orizzontale a:hover {
+	background-color: rgb(184, 184, 184)
+}
+
+body {
+	margin: 0;
+}
+
+.slide {
+	background-image: url("../img/piante.png");
+	position: relative;
+	height: 50vh;
+	background-size: cover;
+}
+
+.slide:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(75, 75, 75, 0.3); /*rgba serve per creare un colore opaco*/
+}
+
+.cta {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	text-align: center;
+	font-size: 15px;
+	color: white;
+}
+
+.cta a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	background-color:  rgb(100, 100, 100);
+	padding: 10px 20px;
+	border-radius: 20px;
+	font-weight: bold;
+	/* se vuoi il bordo fai così border: 1px solid rgb(34, 181, 97); */
+}
+
+.cta a:hover {
+	background-color: rgb(184, 184, 184);
+}
+
+.intro_text {
+	text-align: center;
+	margin: 50px;
+	color: rgb(100, 100, 100) ;
+	padding-bottom: 20px;
+	border-bottom: 2px solid rgb(184, 184, 184);
+}
+
+.container_box {
+    display: flex;
+}
+
+.box {
+		flex: 1;
+			text-align: center;
+			margin: 20px;
+			padding: 30px 20px;
+		;
+}
+.box h3 {
+	color: rgb(100, 100, 100);
+}
+.box h4 {
+	color: rgb(184, 184, 184);
+}
+
+.box img {
+		width: 100%;
+}
+
+.box a {
+		text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	background-color: rgb(100, 100, 100) ;
+	padding: 10px 20px;
+	border-radius: 20px;
+	font-weight: bold;
+	margin-top: 20px;
+	display: inline-block; /*solo così l'elemento in line, ovvero i link, può creare il margine*/
+}
+.box a:hover {
+	background-color:rgb(184, 184, 184);
+}
+
+.slide2 {
+	background-image: url("../img/fine.jpg");
+	background-position: 50%;
+	position: relative;
+	height: 50vh;
+	background-size: cover;
+}
+
+.slide2:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(75, 75, 75, 0.3); /*rgba serve per creare un colore opaco*/
+}
+
+.cta2 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	text-align: center;
+	font-size: 15px;
+	color: white;
+}
+
+.cta2 a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	background-color:  rgb(100, 100, 100);
+	padding: 10px 20px;
+	border-radius: 20px;
+	font-weight: bold;
+	/* se vuoi il bordo fai così border: 1px solid rgb(34, 181, 97); */
+}
+
+.cta2 a:hover {
+	background-color: rgb(184, 184, 184);
+}
+
+footer {
+	background-color: darkslategrey;
+	padding: 5px;
+	color: white;
+	text-align: center;
+	font-size: larger;
+}
+
+@media only screen and (max-width: 678px) {
+    .container_box,
+    footer {
+        flex-direction: column;
+    }
+    .box {
+        border-bottom: 1px solid #000
+    }
+    .col_footer:nth-child(2),
+    .col_footer:nth-child(3) {
+        text-align: left;
+    }
+}
